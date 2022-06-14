@@ -1,0 +1,24 @@
+x_0^T:  [[-1.2  1. ]]
+Iteration:  0 alpha:  1.0 f(x_k):  24.199999999999996 gnorm:  232.86768775422658
+Iteration:  1 alpha:  0.125 f(x_k):  4.731884325266613 gnorm:  4.639426214066988
+Iteration:  2 alpha:  1.0 f(x_k):  4.08739866207213 gnorm:  28.55008047767114
+Iteration:  3 alpha:  1.0 f(x_k):  3.2286725886219716 gnorm:  11.571520864203636
+Iteration:  4 alpha:  1.0 f(x_k):  3.213898091446267 gnorm:  30.32589455233956
+Iteration:  5 alpha:  0.25 f(x_k):  1.942585420621612 gnorm:  3.604102254225653
+Iteration:  6 alpha:  1.0 f(x_k):  1.6001936936469776 gnorm:  9.24841836786373
+Iteration:  7 alpha:  1.0 f(x_k):  1.1783895610053057 gnorm:  4.919800679770612
+Iteration:  8 alpha:  1.0 f(x_k):  0.9224115819230206 gnorm:  8.66434021394332
+Iteration:  9 alpha:  0.5 f(x_k):  0.5974886167898636 gnorm:  1.7788142872501282
+Iteration:  10 alpha:  1.0 f(x_k):  0.4526250978302734 gnorm:  5.8778039099251425
+Iteration:  11 alpha:  1.0 f(x_k):  0.2807624381881799 gnorm:  2.1763707366924256
+Iteration:  12 alpha:  1.0 f(x_k):  0.21139339642311641 gnorm:  9.401289652713874
+Iteration:  13 alpha:  0.5 f(x_k):  0.08901950131615699 gnorm:  0.49206257354086846
+Iteration:  14 alpha:  1.0 f(x_k):  0.05153540487485403 gnorm:  3.9242491921989164
+Iteration:  15 alpha:  1.0 f(x_k):  0.01999277796795172 gnorm:  1.2421077023966254
+Iteration:  16 alpha:  1.0 f(x_k):  0.007169243633375566 gnorm:  2.533067361586506
+Iteration:  17 alpha:  1.0 f(x_k):  0.0010696136790928298 gnorm:  0.23758180514572183
+Iteration:  18 alpha:  1.0 f(x_k):  7.776846403154682e-05 gnorm:  0.34827207835799356
+Iteration:  19 alpha:  1.0 f(x_k):  2.824669490637411e-07 gnorm:  0.0038741872923296933
+Iteration:  20 alpha:  1.0 f(x_k):  8.517075009102173e-12 gnorm:  0.00011871675901824671
+Iteration:  21 alpha:  1.0 f(x_k):  3.7434041890333544e-21 gnorm:  4.473885807193149e-10
+Newton Method:  [[1. 1.]] ^T

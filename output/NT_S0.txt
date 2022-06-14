@@ -1,0 +1,11 @@
+x_0^T:  [[1.2 1.2]]
+Iteration:  0 alpha:  1.0 f(x_k):  5.8 gnorm:  125.16932531574973
+Iteration:  1 alpha:  0.5 f(x_k):  0.03838403441853436 gnorm:  0.3998200870054838
+Iteration:  2 alpha:  1.0 f(x_k):  0.018762343235560718 gnorm:  4.784866047061109
+Iteration:  3 alpha:  1.0 f(x_k):  0.00428918300206763 gnorm:  0.6563523212541529
+Iteration:  4 alpha:  1.0 f(x_k):  0.0009032732866416202 gnorm:  1.2658319322638936
+Iteration:  5 alpha:  1.0 f(x_k):  1.851409352796297e-05 gnorm:  0.034658260662313006
+Iteration:  6 alpha:  1.0 f(x_k):  3.397038839840444e-08 gnorm:  0.008019780399625335
+Iteration:  7 alpha:  1.0 f(x_k):  3.2266770545787956e-14 gnorm:  1.4519478555643595e-06
+Iteration:  8 alpha:  1.0 f(x_k):  1.0508297789313315e-25 gnorm:  1.435274102366317e-11
+Newton Method:  [[1. 1.]] ^T
