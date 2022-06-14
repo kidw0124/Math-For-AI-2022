@@ -19,7 +19,7 @@ def backtracking_Linesearch(x_k, p_k, f, grad, alpha_0=1.0, rho=0.5, c_1=1e-4, m
     return alpha
 
 
-def do(type, x_0, f, grad, hess, tol=1e-12, max_iter=50000):
+def do(type, x_0, f, grad, hess, tol=1e-12, max_iter=50000, file=None):
     k = 0
     x_k = x_0
     while k < max_iter:
@@ -33,19 +33,19 @@ def do(type, x_0, f, grad, hess, tol=1e-12, max_iter=50000):
         # Choose a step size alpha_k
         alpha_k = backtracking_Linesearch(x_k, p_k, f, grad)
         print("Iteration: ", k, "alpha: ", alpha_k,
-              "f(x_k): ", f(x_k), "gnorm: ", norm(grad(x_k)))
+              "f(x_k): ", f(x_k), "gnorm: ", norm(grad(x_k)), file=file)
         # Update x_k
         x_k = x_k + alpha_k*p_k
         k += 1
     return x_k
 
 
-def steepest_descent(x_0, f, grad, hess, tol=1e-12, max_iter=50000):
-    return do('steepest', x_0, f, grad, hess, tol, max_iter)
+def steepest_descent(x_0, f, grad, hess, tol=1e-12, max_iter=50000, file=None):
+    return do('steepest', x_0, f, grad, hess, tol, max_iter, file)
 
 
-def newton_method(x_0, f, grad, hess, tol=1e-12, max_iter=50000):
-    return do('newton', x_0, f, grad, hess, tol, max_iter)
+def newton_method(x_0, f, grad, hess, tol=1e-12, max_iter=50000, file=None):
+    return do('newton', x_0, f, grad, hess, tol, max_iter, file)
 
 
 def Rosenbrock(x):
@@ -60,11 +60,17 @@ def Hessian_Rosenbrock(x):
     return np.array([[1200*x[0][0]**2-400*x[1][0]+2, -400*x[0][0]], [-400*x[0][0], 200]])
 
 def __main__():
-    for x_0 in [np.array([[1.2], [1.2]]), np.array([[-1.2],[1]])]:
-        print("x_0: ", x_0)
-        x_k = steepest_descent(x_0, Rosenbrock, Gradient_Rosenbrock, Hessian_Rosenbrock)
-        print("Steepest Descent: [", x_k[0][0], ", ", x_k[1][0], "]^T")
-        x_k = newton_method(x_0, Rosenbrock, Gradient_Rosenbrock, Hessian_Rosenbrock)
-        print("Newton Method: [", x_k[0][0], ", ", x_k[1][0], "]^T")
+    path ="output"
+    for x_0, name in [[np.array([[1.2], [1.2]]),"S0"], [np.array([[-1.2],[1]]),"S1"]]:
+        f = open(path + "/GD_" + name + ".txt", "w")
+        print("x_0^T: ", x_0.T, file=f)
+        x_k = steepest_descent(x_0, Rosenbrock, Gradient_Rosenbrock, Hessian_Rosenbrock, file=f)
+        print("Steepest Descent: ", x_k.T, "^T", file=f)
+        f.close()
+        f= open(path + "/NT_" + name + ".txt", "a")
+        print("x_0^T: ", x_0.T, file=f)
+        x_k = newton_method(x_0, Rosenbrock, Gradient_Rosenbrock, Hessian_Rosenbrock, file=f)
+        print("Newton Method: ", x_k.T, "^T", file=f)
+        f.close()
 
 __main__()
